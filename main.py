@@ -13,6 +13,10 @@ def hello():
 def server_static(filename):
     return static_file(filename, 'static/')
 
+@route('/')
+def home():
+    return "Привет!"
+  
 #запускаем локальный сервер 
 if os.environ.get('APP_LOCATION') == 'heroku':
 	run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
