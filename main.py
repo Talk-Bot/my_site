@@ -13,7 +13,7 @@ def hello():
 def server_static(filename):
     return static_file(filename, 'static/')
 
-@route('/')
+@route('/home')
 def home():
     return "Привет!"
   
